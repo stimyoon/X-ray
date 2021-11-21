@@ -63,7 +63,7 @@ struct ContentView: View {
                 Path{ path in
                     path.move(to: CGPoint(x: firstStart.x, y: firstStart.y))
                     path.addLine(to: CGPoint(x: firstEnd.x, y: firstEnd.y))
-                }.stroke(.blue, lineWidth: 10)
+                }.stroke(.blue, lineWidth: 5)
                 Path{ path in
                     path.move(to: CGPoint(x: secondStart.x, y: secondStart.y))
                     path.addLine(to: CGPoint(x: secondEnd.x, y:  secondEnd.y))
