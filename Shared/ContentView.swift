@@ -7,33 +7,7 @@
 
 import SwiftUI
 
-//struct ContentView: View {
-//    var body: some View {
-//
-//        Text("Hello, world!")
-//            .frame(minWidth: 500, minHeight: 500)
-//            .frame(maxWidth: .infinity, maxHeight: .infinity)
-//            .padding()
-//    }
-//}
-//struct ContentView: View {
-//    var mouseLocation: NSPoint { NSEvent.mouseLocation }
-//    @State var overImg = false
-//    var body: some View {
-//        Image(systemName: "clock").resizable().frame(width: 444, height: 444)
-//            .onHover { over in
-//                overImg = over
-//            }
-//            .onAppear(perform: {
-//                NSEvent.addLocalMonitorForEvents(matching: [.mouseMoved]) {
-//                    if overImg {
-//                        print("mouse: \(self.mouseLocation.x) \(self.mouseLocation.y)")
-//                    }
-//                    return $0
-//                }
-//            })
-//    }
-//}
+
 struct ContentView: View {
     @State private var firstStart: CGPoint = .zero
     @State private var firstEnd: CGPoint = .zero
@@ -93,7 +67,7 @@ struct ContentView: View {
                 Path{ path in
                     path.move(to: CGPoint(x: secondStart.x, y: secondStart.y))
                     path.addLine(to: CGPoint(x: secondEnd.x, y:  secondEnd.y))
-                }.stroke(.yellow, lineWidth: 10)
+                }.stroke(.yellow, lineWidth: 5)
             }
         }
     }
