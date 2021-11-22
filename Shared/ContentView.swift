@@ -14,8 +14,24 @@ struct ContentView: View {
     @State private var secondStart: CGPoint = .zero
     @State private var secondEnd: CGPoint = .zero
     
+    @State private var angle : Double? = nil
+    
+    
     @State private var firstLine = true
     
+    private func setAngle() {
+        let v1 = CGPoint(x: firstEnd.x-firstStart.x, y: firstEnd.y-firstStart.y)
+        let v2 = CGPoint(x: secondEnd.x-secondStart.x, y: secondEnd.y-secondStart.y)
+        guard v1 != .zero || v2 != .zero else {
+            angle = nil
+            return
+        }
+        let v1v2 = Double(v1.x*v2.x + v1.y*v2.y)
+        let v1Len = Double(sqrt(v1.x*v1.x + v1.y*v1.y))
+        let v2Len = Double(sqrt(v2.x*v2.x + v2.y*v2.y))
+        let value = v1v2 / (v1Len * v2Len)
+        angle = acos(value) * 180 / .pi
+    }
     var body: some View {
         
         let myGesture = DragGesture(minimumDistance: 0, coordinateSpace: .local)
@@ -27,6 +43,7 @@ struct ContentView: View {
                     self.secondStart = $0.startLocation
                     self.secondEnd = $0.location
                 }
+                setAngle()
             })
             .onEnded({
                 if firstLine {
@@ -44,7 +61,7 @@ struct ContentView: View {
         return ZStack{
             GeometryReader{ geo in
                 VStack {
-                    
+                    Text("Angle = \(angle ?? 0)")
                     Spacer()
                     
                     HStack {
