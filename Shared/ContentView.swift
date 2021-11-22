@@ -59,19 +59,21 @@ struct ContentView: View {
         
         // Spacers needed to make the VStack occupy the whole screen
         return ZStack{
+            
             GeometryReader{ geo in
                 VStack {
-                    Text("Angle = \(angle ?? 0)")
-                    Spacer()
-                    
-                    HStack {
+                    ZStack(alignment: .leading){
+                        HStack{
+                            Image("X-ray")
+                                .resizable()
+                                .aspectRatio(contentMode: .fit)
+                            Spacer()
+                        }
+                        Text("Angle = \(angle ?? 0)")
+                            .font(.title)
+                            .foregroundColor(.blue)
                         Spacer()
-                        Text("Tapped at: \(firstStart.x), \(firstStart.y)")
-                        Spacer()
-                        Text("Ended at: \(firstEnd.x), \(firstEnd.y)")
                     }
-                    
-                    Spacer()
                     
                 }
                 .border(Color.green)
@@ -81,14 +83,18 @@ struct ContentView: View {
                     path.move(to: CGPoint(x: firstStart.x, y: firstStart.y))
                     path.addLine(to: CGPoint(x: firstEnd.x, y: firstEnd.y))
                 }.stroke(.blue, lineWidth: 5)
+                    .opacity(0.5)
                 Path{ path in
                     path.move(to: CGPoint(x: secondStart.x, y: secondStart.y))
                     path.addLine(to: CGPoint(x: secondEnd.x, y:  secondEnd.y))
                 }.stroke(.yellow, lineWidth: 5)
+                    .opacity(0.5)
             }
+            
         }
     }
 }
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
