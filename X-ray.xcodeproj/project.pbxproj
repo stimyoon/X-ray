@@ -7,21 +7,45 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		917489BA2761AF580068DBAD /* OneLine2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917489B92761AF580068DBAD /* OneLine2.swift */; };
+		917489BB2761AF580068DBAD /* OneLine2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917489B92761AF580068DBAD /* OneLine2.swift */; };
+		917489BD2762DE9A0068DBAD /* UsingOverly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917489BC2762DE9A0068DBAD /* UsingOverly.swift */; };
+		917489BE2762DE9A0068DBAD /* UsingOverly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917489BC2762DE9A0068DBAD /* UsingOverly.swift */; };
+		917489C02763B36C0068DBAD /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917489BF2763B36C0068DBAD /* LineView.swift */; };
+		917489C12763B36C0068DBAD /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917489BF2763B36C0068DBAD /* LineView.swift */; };
+		917489C32763BAB00068DBAD /* LineView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917489C22763BAB00068DBAD /* LineView2.swift */; };
+		917489C42763BAB00068DBAD /* LineView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917489C22763BAB00068DBAD /* LineView2.swift */; };
 		91A325DA2741FFD100E9FC0F /* X_rayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A325CA2741FFD000E9FC0F /* X_rayApp.swift */; };
 		91A325DB2741FFD100E9FC0F /* X_rayApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A325CA2741FFD000E9FC0F /* X_rayApp.swift */; };
 		91A325DC2741FFD100E9FC0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A325CB2741FFD000E9FC0F /* ContentView.swift */; };
 		91A325DD2741FFD100E9FC0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A325CB2741FFD000E9FC0F /* ContentView.swift */; };
 		91A325DE2741FFD100E9FC0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A325CC2741FFD100E9FC0F /* Assets.xcassets */; };
 		91A325DF2741FFD100E9FC0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A325CC2741FFD100E9FC0F /* Assets.xcassets */; };
+		91C5362F275D329800ED5F49 /* MultipleLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5362E275D329800ED5F49 /* MultipleLines.swift */; };
+		91C53630275D329800ED5F49 /* MultipleLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5362E275D329800ED5F49 /* MultipleLines.swift */; };
+		91C53632275D94FB00ED5F49 /* OneLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C53631275D94FB00ED5F49 /* OneLine.swift */; };
+		91C53633275D94FB00ED5F49 /* OneLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C53631275D94FB00ED5F49 /* OneLine.swift */; };
+		91C8CD7B27656F76000ACC41 /* LineView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C8CD7A27656F76000ACC41 /* LineView3.swift */; };
+		91C8CD7C27656F76000ACC41 /* LineView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C8CD7A27656F76000ACC41 /* LineView3.swift */; };
+		91D010842753C78700B053EE /* PathExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D010832753C78700B053EE /* PathExample.swift */; };
+		91D010852753C78700B053EE /* PathExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D010832753C78700B053EE /* PathExample.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		917489B92761AF580068DBAD /* OneLine2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLine2.swift; sourceTree = "<group>"; };
+		917489BC2762DE9A0068DBAD /* UsingOverly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingOverly.swift; sourceTree = "<group>"; };
+		917489BF2763B36C0068DBAD /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		917489C22763BAB00068DBAD /* LineView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView2.swift; sourceTree = "<group>"; };
 		91A325CA2741FFD000E9FC0F /* X_rayApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = X_rayApp.swift; sourceTree = "<group>"; };
 		91A325CB2741FFD000E9FC0F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		91A325CC2741FFD100E9FC0F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		91A325D12741FFD100E9FC0F /* X-ray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X-ray.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A325D72741FFD100E9FC0F /* X-ray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X-ray.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A325D92741FFD100E9FC0F /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		91C5362E275D329800ED5F49 /* MultipleLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleLines.swift; sourceTree = "<group>"; };
+		91C53631275D94FB00ED5F49 /* OneLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLine.swift; sourceTree = "<group>"; };
+		91C8CD7A27656F76000ACC41 /* LineView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView3.swift; sourceTree = "<group>"; };
+		91D010832753C78700B053EE /* PathExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathExample.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,14 @@
 			children = (
 				91A325CA2741FFD000E9FC0F /* X_rayApp.swift */,
 				91A325CB2741FFD000E9FC0F /* ContentView.swift */,
+				91D010832753C78700B053EE /* PathExample.swift */,
+				91C5362E275D329800ED5F49 /* MultipleLines.swift */,
+				91C53631275D94FB00ED5F49 /* OneLine.swift */,
+				917489B92761AF580068DBAD /* OneLine2.swift */,
+				917489BC2762DE9A0068DBAD /* UsingOverly.swift */,
+				917489BF2763B36C0068DBAD /* LineView.swift */,
+				917489C22763BAB00068DBAD /* LineView2.swift */,
+				91C8CD7A27656F76000ACC41 /* LineView3.swift */,
 				91A325CC2741FFD100E9FC0F /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -176,8 +208,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91C8CD7B27656F76000ACC41 /* LineView3.swift in Sources */,
+				917489BD2762DE9A0068DBAD /* UsingOverly.swift in Sources */,
+				91C53632275D94FB00ED5F49 /* OneLine.swift in Sources */,
+				91D010842753C78700B053EE /* PathExample.swift in Sources */,
+				91C5362F275D329800ED5F49 /* MultipleLines.swift in Sources */,
+				917489C32763BAB00068DBAD /* LineView2.swift in Sources */,
+				917489C02763B36C0068DBAD /* LineView.swift in Sources */,
 				91A325DC2741FFD100E9FC0F /* ContentView.swift in Sources */,
 				91A325DA2741FFD100E9FC0F /* X_rayApp.swift in Sources */,
+				917489BA2761AF580068DBAD /* OneLine2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,8 +225,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91C8CD7C27656F76000ACC41 /* LineView3.swift in Sources */,
+				917489BE2762DE9A0068DBAD /* UsingOverly.swift in Sources */,
+				91C53633275D94FB00ED5F49 /* OneLine.swift in Sources */,
+				91D010852753C78700B053EE /* PathExample.swift in Sources */,
+				91C53630275D329800ED5F49 /* MultipleLines.swift in Sources */,
+				917489C42763BAB00068DBAD /* LineView2.swift in Sources */,
+				917489C12763B36C0068DBAD /* LineView.swift in Sources */,
 				91A325DD2741FFD100E9FC0F /* ContentView.swift in Sources */,
 				91A325DB2741FFD100E9FC0F /* X_rayApp.swift in Sources */,
+				917489BB2761AF580068DBAD /* OneLine2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -383,7 +431,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Yoon.X-ray";
 				PRODUCT_NAME = "X-ray";
@@ -411,7 +459,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.6;
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Yoon.X-ray";
 				PRODUCT_NAME = "X-ray";
