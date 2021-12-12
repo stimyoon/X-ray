@@ -21,6 +21,8 @@
 		91A325DD2741FFD100E9FC0F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91A325CB2741FFD000E9FC0F /* ContentView.swift */; };
 		91A325DE2741FFD100E9FC0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A325CC2741FFD100E9FC0F /* Assets.xcassets */; };
 		91A325DF2741FFD100E9FC0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A325CC2741FFD100E9FC0F /* Assets.xcassets */; };
+		91B1F45B2766988000B223F3 /* S1Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F45A2766988000B223F3 /* S1Line.swift */; };
+		91B1F45C2766988000B223F3 /* S1Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F45A2766988000B223F3 /* S1Line.swift */; };
 		91C5362F275D329800ED5F49 /* MultipleLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5362E275D329800ED5F49 /* MultipleLines.swift */; };
 		91C53630275D329800ED5F49 /* MultipleLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5362E275D329800ED5F49 /* MultipleLines.swift */; };
 		91C53632275D94FB00ED5F49 /* OneLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C53631275D94FB00ED5F49 /* OneLine.swift */; };
@@ -42,6 +44,7 @@
 		91A325D12741FFD100E9FC0F /* X-ray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X-ray.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A325D72741FFD100E9FC0F /* X-ray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X-ray.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A325D92741FFD100E9FC0F /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
+		91B1F45A2766988000B223F3 /* S1Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S1Line.swift; sourceTree = "<group>"; };
 		91C5362E275D329800ED5F49 /* MultipleLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleLines.swift; sourceTree = "<group>"; };
 		91C53631275D94FB00ED5F49 /* OneLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLine.swift; sourceTree = "<group>"; };
 		91C8CD7A27656F76000ACC41 /* LineView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView3.swift; sourceTree = "<group>"; };
@@ -88,6 +91,7 @@
 				917489BF2763B36C0068DBAD /* LineView.swift */,
 				917489C22763BAB00068DBAD /* LineView2.swift */,
 				91C8CD7A27656F76000ACC41 /* LineView3.swift */,
+				91B1F45A2766988000B223F3 /* S1Line.swift */,
 				91A325CC2741FFD100E9FC0F /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -218,6 +222,7 @@
 				91A325DC2741FFD100E9FC0F /* ContentView.swift in Sources */,
 				91A325DA2741FFD100E9FC0F /* X_rayApp.swift in Sources */,
 				917489BA2761AF580068DBAD /* OneLine2.swift in Sources */,
+				91B1F45B2766988000B223F3 /* S1Line.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +240,7 @@
 				91A325DD2741FFD100E9FC0F /* ContentView.swift in Sources */,
 				91A325DB2741FFD100E9FC0F /* X_rayApp.swift in Sources */,
 				917489BB2761AF580068DBAD /* OneLine2.swift in Sources */,
+				91B1F45C2766988000B223F3 /* S1Line.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

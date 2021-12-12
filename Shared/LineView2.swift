@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RelativePoint: Equatable {
+struct RelativePoint {
     var x : CGFloat = 0
     var y : CGFloat = 0
     mutating func setPoint(point: CGPoint, size: CGSize){
@@ -33,9 +33,6 @@ struct RelativePoint: Equatable {
     init(point: CGPoint = .zero, size: CGSize = .zero){
         setPoint(point: point, size: size)
     }
-    static func == (lhs: RelativePoint, rhs: RelativePoint) -> Bool {
-        return lhs.x == rhs.x && lhs.y == rhs.y
-    }
 }
 struct RelativeLine {
     var p1 = RelativePoint()
@@ -53,102 +50,91 @@ struct Constants {
     struct Window {
         static let width: CGFloat = 500
         static let height: CGFloat = 600
-        static let size: CGSize = CGSize(width: 500, height: 600)
     }
 }
-class RelativeLineVM : ObservableObject, Equatable {
-    @Published var p1 : RelativePoint? = RelativePoint(point: CGPoint(x: 50, y: 50), size: Constants.Window.size)
-    @Published var p2 : RelativePoint? = RelativePoint(point: CGPoint(x: 100, y: 150), size: Constants.Window.size)
-    @Published var size : CGSize = CGSize(width: Constants.Window.width, height: Constants.Window.height)
-    
-    static func == (lhs: RelativeLineVM, rhs: RelativeLineVM) -> Bool {
-        return lhs.p1 == rhs.p1 && lhs.p2 == rhs.p2 && lhs.size == rhs.size
-    }
+class RelativeLineVM : ObservableObject {
+    @Published var p1 : RelativePoint?
+    @Published var p2 : RelativePoint?
 }
 struct LineView2: View {
 
-    @StateObject var lineVM = RelativeLineVM()
+    @State var width : CGFloat = Constants.Window.width
+    @State var height : CGFloat = Constants.Window.height
+
+    @State var line = RelativeLine(p1: CGPoint(x: 50, y: 50), p2: CGPoint(x: 100, y: 100), width: Constants.Window.width, height: Constants.Window.height)
+    @State var perp = RelativeLine(p1: CGPoint(x: 50, y: 100), p2: CGPoint(x: 50, y: 50), width: Constants.Window.width, height: Constants.Window.height)
     
     var body: some View {
         ZStack(alignment: .leading){
             Image("X-ray")
                 .resizable()
                 .scaledToFit()
-                .frame(minWidth: lineVM.size.width, minHeight: lineVM.size.height)
+                .frame(minWidth: Constants.Window.width, minHeight: Constants.Window.height)
                 .readSize { newSize in
-                    lineVM.size = newSize
+                    
+                    width = newSize.width
+                    height = newSize.height
                   }
                 .overlay {
-                    MyLine(lineVM: lineVM)
+                    MyLine(line: $line, width: $width, height: $height)
+                    MyLine(line: $perp, width: $width, height: $height)
+                    
                 }
         }
     }
 }
 struct MyLine : View {
-    @ObservedObject var lineVM : RelativeLineVM
-//    @State var p1 : RelativePoint
-//    @State var p2 : RelativePoint
-//    @State var size : CGSize
+    @Binding var line : RelativeLine
+    @Binding var width: CGFloat
+    @Binding var height: CGFloat
     
     var body: some View {
-        if lineVM.p1 != nil && lineVM.p2 != nil {
-            Path{ path in
-                path.move(to: lineVM.p1!.cgPoint(size: lineVM.size))
-                path.addLine(to: lineVM.p2!.cgPoint(size: lineVM.size))
-            }.stroke(.blue, lineWidth: 5)
-        }
-        MyRectangle(relativePoint: $lineVM.p1, size: $lineVM.size)
+        Path{ path in
+            path.move(to: line.p1.cgPoint(width: width, height: height))
+            path.addLine(to: line.p2.cgPoint(width: width, height: height))
+        }.stroke(.blue, lineWidth: 5)
+        MyRectangle(relativePoint: $line.p1, width: $width, height: $height)
             .foregroundColor(.yellow)
-        MyRectangle(relativePoint: $lineVM.p2, size: $lineVM.size)
+        MyRectangle(relativePoint: $line.p2, width: $width, height: $height)
             .foregroundColor(.red)
     }
-//    init(lineVM: RelativeLineVM) {
-//        self.lineVM = lineVM
-//        _p1 = State(initialValue: lineVM.p1)
-//        _p2 = State(initialValue: lineMV.p2)
-//    }
 }
 struct MyRectangle : View {
-    @Binding var relativePoint: RelativePoint?
-    @Binding var size : CGSize
+    @Binding var relativePoint: RelativePoint
+    @Binding var width: CGFloat
+    @Binding var height: CGFloat
     
     var body: some View {
-        if relativePoint == nil {
-            Rectangle()
-                .foregroundColor(.clear)
-        } else {
-            Rectangle()
-                .frame(width: 15, height: 15)
-                .border(.blue)
-                .position(relativePoint!.cgPoint(width: size.width, height: size.height))
-                .gesture(
-                    DragGesture(minimumDistance: 0, coordinateSpace: .local)
-                        .onChanged({ value in
-                            setRelativePointWithinFrame(newLocation: value.location)
+        Rectangle()
+            .frame(width: 15, height: 15)
+            .border(.blue)
+            .position(relativePoint.cgPoint(width: width, height: height))
+            .gesture(
+                DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                    .onChanged({ value in
+                        setRelativePointWithinFrame(newLocation: value.location)
 
-                        })
-                )
-
-        }
+                    })
+            )
     }
 
     func setRelativePointWithinFrame(newLocation: CGPoint){
         if newLocation.x < 0 {
-            relativePoint!.setX(x: 0, width: size.width)
+            relativePoint.setX(x: 0, width: width)
         } else {
-            if newLocation.x >= size.width {
-                relativePoint!.setX(x: size.width-1, width: size.width)
+            if newLocation.x >= width{
+                relativePoint.setX(x: width-1, width: width)
             } else {
-                relativePoint!.setX(x: newLocation.x, width: size.width)
+                relativePoint.setX(x: newLocation.x, width: width)
             }
         }
         if newLocation.y < 0 {
-            relativePoint!.setY(y: 0, height: size.height)
+            relativePoint.setY(y: 0, height: height)
         }else{
-            if newLocation.y >= size.height {
-                relativePoint!.setY(y: size.height-1, height: size.height)
+            if newLocation.y >= height {
+                relativePoint.setY(y: height-1, height: height)
             } else {
-                relativePoint!.setY(y: newLocation.y, height: size.height)
+                relativePoint.setY(y: newLocation.y, height: height)
             }
         }
  

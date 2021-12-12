@@ -11,7 +11,7 @@ import SwiftUI
 struct X_rayApp: App {
     var body: some Scene {
         WindowGroup {
-            LineView2()
+            S1Line()
         }
     }
 }
