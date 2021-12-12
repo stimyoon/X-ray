@@ -6,18 +6,7 @@
 //
 
 import SwiftUI
-struct Line: Identifiable {
-    var id = UUID()
-    var p1 : CGPoint?
-    var p2 : CGPoint?
-    var isValid : Bool {
-        return p1 != nil && p2 != nil
-    }
-    mutating func invalidate(){
-        p1 = nil
-        p2 = nil
-    }
-}
+
 
 struct SizePreferenceKey: PreferenceKey {
   static var defaultValue: CGSize = .zero

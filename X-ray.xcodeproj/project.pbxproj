@@ -23,6 +23,16 @@
 		91A325DF2741FFD100E9FC0F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 91A325CC2741FFD100E9FC0F /* Assets.xcassets */; };
 		91B1F45B2766988000B223F3 /* S1Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F45A2766988000B223F3 /* S1Line.swift */; };
 		91B1F45C2766988000B223F3 /* S1Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F45A2766988000B223F3 /* S1Line.swift */; };
+		91B1F45E2766B58000B223F3 /* S1Line2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F45D2766B58000B223F3 /* S1Line2.swift */; };
+		91B1F45F2766B58000B223F3 /* S1Line2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F45D2766B58000B223F3 /* S1Line2.swift */; };
+		91B1F4612766B96300B223F3 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F4602766B96300B223F3 /* Line.swift */; };
+		91B1F4622766B96300B223F3 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F4602766B96300B223F3 /* Line.swift */; };
+		91B1F4662766BA0B00B223F3 /* LineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F4652766BA0B00B223F3 /* LineViewModel.swift */; };
+		91B1F4672766BA0B00B223F3 /* LineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F4652766BA0B00B223F3 /* LineViewModel.swift */; };
+		91B1F4692766C32C00B223F3 /* LumbarLordosisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F4682766C32C00B223F3 /* LumbarLordosisViewModel.swift */; };
+		91B1F46A2766C32C00B223F3 /* LumbarLordosisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F4682766C32C00B223F3 /* LumbarLordosisViewModel.swift */; };
+		91B1F46C2766C34C00B223F3 /* S1LineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F46B2766C34C00B223F3 /* S1LineViewModel.swift */; };
+		91B1F46D2766C34C00B223F3 /* S1LineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F46B2766C34C00B223F3 /* S1LineViewModel.swift */; };
 		91C5362F275D329800ED5F49 /* MultipleLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5362E275D329800ED5F49 /* MultipleLines.swift */; };
 		91C53630275D329800ED5F49 /* MultipleLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5362E275D329800ED5F49 /* MultipleLines.swift */; };
 		91C53632275D94FB00ED5F49 /* OneLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C53631275D94FB00ED5F49 /* OneLine.swift */; };
@@ -45,6 +55,11 @@
 		91A325D72741FFD100E9FC0F /* X-ray.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "X-ray.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		91A325D92741FFD100E9FC0F /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		91B1F45A2766988000B223F3 /* S1Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S1Line.swift; sourceTree = "<group>"; };
+		91B1F45D2766B58000B223F3 /* S1Line2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S1Line2.swift; sourceTree = "<group>"; };
+		91B1F4602766B96300B223F3 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		91B1F4652766BA0B00B223F3 /* LineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViewModel.swift; sourceTree = "<group>"; };
+		91B1F4682766C32C00B223F3 /* LumbarLordosisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumbarLordosisViewModel.swift; sourceTree = "<group>"; };
+		91B1F46B2766C34C00B223F3 /* S1LineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S1LineViewModel.swift; sourceTree = "<group>"; };
 		91C5362E275D329800ED5F49 /* MultipleLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleLines.swift; sourceTree = "<group>"; };
 		91C53631275D94FB00ED5F49 /* OneLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLine.swift; sourceTree = "<group>"; };
 		91C8CD7A27656F76000ACC41 /* LineView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView3.swift; sourceTree = "<group>"; };
@@ -81,6 +96,8 @@
 		91A325C92741FFD000E9FC0F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				91B1F4642766B98E00B223F3 /* View Model */,
+				91B1F4632766B97000B223F3 /* Model */,
 				91A325CA2741FFD000E9FC0F /* X_rayApp.swift */,
 				91A325CB2741FFD000E9FC0F /* ContentView.swift */,
 				91D010832753C78700B053EE /* PathExample.swift */,
@@ -92,6 +109,7 @@
 				917489C22763BAB00068DBAD /* LineView2.swift */,
 				91C8CD7A27656F76000ACC41 /* LineView3.swift */,
 				91B1F45A2766988000B223F3 /* S1Line.swift */,
+				91B1F45D2766B58000B223F3 /* S1Line2.swift */,
 				91A325CC2741FFD100E9FC0F /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -112,6 +130,24 @@
 				91A325D92741FFD100E9FC0F /* macOS.entitlements */,
 			);
 			path = macOS;
+			sourceTree = "<group>";
+		};
+		91B1F4632766B97000B223F3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				91B1F4602766B96300B223F3 /* Line.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		91B1F4642766B98E00B223F3 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				91B1F4652766BA0B00B223F3 /* LineViewModel.swift */,
+				91B1F46B2766C34C00B223F3 /* S1LineViewModel.swift */,
+				91B1F4682766C32C00B223F3 /* LumbarLordosisViewModel.swift */,
+			);
+			path = "View Model";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +248,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91B1F4662766BA0B00B223F3 /* LineViewModel.swift in Sources */,
 				91C8CD7B27656F76000ACC41 /* LineView3.swift in Sources */,
 				917489BD2762DE9A0068DBAD /* UsingOverly.swift in Sources */,
 				91C53632275D94FB00ED5F49 /* OneLine.swift in Sources */,
@@ -219,9 +256,13 @@
 				91C5362F275D329800ED5F49 /* MultipleLines.swift in Sources */,
 				917489C32763BAB00068DBAD /* LineView2.swift in Sources */,
 				917489C02763B36C0068DBAD /* LineView.swift in Sources */,
+				91B1F46C2766C34C00B223F3 /* S1LineViewModel.swift in Sources */,
+				91B1F4612766B96300B223F3 /* Line.swift in Sources */,
+				91B1F4692766C32C00B223F3 /* LumbarLordosisViewModel.swift in Sources */,
 				91A325DC2741FFD100E9FC0F /* ContentView.swift in Sources */,
 				91A325DA2741FFD100E9FC0F /* X_rayApp.swift in Sources */,
 				917489BA2761AF580068DBAD /* OneLine2.swift in Sources */,
+				91B1F45E2766B58000B223F3 /* S1Line2.swift in Sources */,
 				91B1F45B2766988000B223F3 /* S1Line.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +271,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91B1F4672766BA0B00B223F3 /* LineViewModel.swift in Sources */,
 				91C8CD7C27656F76000ACC41 /* LineView3.swift in Sources */,
 				917489BE2762DE9A0068DBAD /* UsingOverly.swift in Sources */,
 				91C53633275D94FB00ED5F49 /* OneLine.swift in Sources */,
@@ -237,9 +279,13 @@
 				91C53630275D329800ED5F49 /* MultipleLines.swift in Sources */,
 				917489C42763BAB00068DBAD /* LineView2.swift in Sources */,
 				917489C12763B36C0068DBAD /* LineView.swift in Sources */,
+				91B1F46D2766C34C00B223F3 /* S1LineViewModel.swift in Sources */,
+				91B1F4622766B96300B223F3 /* Line.swift in Sources */,
+				91B1F46A2766C32C00B223F3 /* LumbarLordosisViewModel.swift in Sources */,
 				91A325DD2741FFD100E9FC0F /* ContentView.swift in Sources */,
 				91A325DB2741FFD100E9FC0F /* X_rayApp.swift in Sources */,
 				917489BB2761AF580068DBAD /* OneLine2.swift in Sources */,
+				91B1F45F2766B58000B223F3 /* S1Line2.swift in Sources */,
 				91B1F45C2766988000B223F3 /* S1Line.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
