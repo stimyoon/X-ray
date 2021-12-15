@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		915EED6227695A8200F01374 /* ToolPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915EED6127695A8200F01374 /* ToolPalette.swift */; };
 		917489BA2761AF580068DBAD /* OneLine2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917489B92761AF580068DBAD /* OneLine2.swift */; };
 		917489BB2761AF580068DBAD /* OneLine2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917489B92761AF580068DBAD /* OneLine2.swift */; };
 		917489BD2762DE9A0068DBAD /* UsingOverly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917489BC2762DE9A0068DBAD /* UsingOverly.swift */; };
@@ -33,6 +34,8 @@
 		91B1F46A2766C32C00B223F3 /* LumbarLordosisViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F4682766C32C00B223F3 /* LumbarLordosisViewModel.swift */; };
 		91B1F46C2766C34C00B223F3 /* S1LineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F46B2766C34C00B223F3 /* S1LineViewModel.swift */; };
 		91B1F46D2766C34C00B223F3 /* S1LineViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F46B2766C34C00B223F3 /* S1LineViewModel.swift */; };
+		91B1F4702766CF7A00B223F3 /* LumbarLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F46F2766CF7A00B223F3 /* LumbarLines.swift */; };
+		91B1F4712766CF7A00B223F3 /* LumbarLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B1F46F2766CF7A00B223F3 /* LumbarLines.swift */; };
 		91C5362F275D329800ED5F49 /* MultipleLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5362E275D329800ED5F49 /* MultipleLines.swift */; };
 		91C53630275D329800ED5F49 /* MultipleLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C5362E275D329800ED5F49 /* MultipleLines.swift */; };
 		91C53632275D94FB00ED5F49 /* OneLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C53631275D94FB00ED5F49 /* OneLine.swift */; };
@@ -41,9 +44,12 @@
 		91C8CD7C27656F76000ACC41 /* LineView3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C8CD7A27656F76000ACC41 /* LineView3.swift */; };
 		91D010842753C78700B053EE /* PathExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D010832753C78700B053EE /* PathExample.swift */; };
 		91D010852753C78700B053EE /* PathExample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91D010832753C78700B053EE /* PathExample.swift */; };
+		91F7C43E276851B1006E935B /* MyToolBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F7C43D276851B1006E935B /* MyToolBar.swift */; };
+		91FEFAFF276981F400867723 /* CompletionHandlerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91FEFAFE276981F400867723 /* CompletionHandlerButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		915EED6127695A8200F01374 /* ToolPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolPalette.swift; sourceTree = "<group>"; };
 		917489B92761AF580068DBAD /* OneLine2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLine2.swift; sourceTree = "<group>"; };
 		917489BC2762DE9A0068DBAD /* UsingOverly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingOverly.swift; sourceTree = "<group>"; };
 		917489BF2763B36C0068DBAD /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
@@ -60,10 +66,13 @@
 		91B1F4652766BA0B00B223F3 /* LineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineViewModel.swift; sourceTree = "<group>"; };
 		91B1F4682766C32C00B223F3 /* LumbarLordosisViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumbarLordosisViewModel.swift; sourceTree = "<group>"; };
 		91B1F46B2766C34C00B223F3 /* S1LineViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = S1LineViewModel.swift; sourceTree = "<group>"; };
+		91B1F46F2766CF7A00B223F3 /* LumbarLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LumbarLines.swift; sourceTree = "<group>"; };
 		91C5362E275D329800ED5F49 /* MultipleLines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleLines.swift; sourceTree = "<group>"; };
 		91C53631275D94FB00ED5F49 /* OneLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLine.swift; sourceTree = "<group>"; };
 		91C8CD7A27656F76000ACC41 /* LineView3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView3.swift; sourceTree = "<group>"; };
 		91D010832753C78700B053EE /* PathExample.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathExample.swift; sourceTree = "<group>"; };
+		91F7C43D276851B1006E935B /* MyToolBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyToolBar.swift; sourceTree = "<group>"; };
+		91FEFAFE276981F400867723 /* CompletionHandlerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompletionHandlerButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +93,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9138140B2768D05D0058FD9B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				915EED6127695A8200F01374 /* ToolPalette.swift */,
+				91FEFAFE276981F400867723 /* CompletionHandlerButton.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		91A325C42741FFD000E9FC0F = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +114,8 @@
 		91A325C92741FFD000E9FC0F /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				91F7C43D276851B1006E935B /* MyToolBar.swift */,
+				91B1F46E2766C54600B223F3 /* View */,
 				91B1F4642766B98E00B223F3 /* View Model */,
 				91B1F4632766B97000B223F3 /* Model */,
 				91A325CA2741FFD000E9FC0F /* X_rayApp.swift */,
@@ -105,7 +125,6 @@
 				91C53631275D94FB00ED5F49 /* OneLine.swift */,
 				917489B92761AF580068DBAD /* OneLine2.swift */,
 				917489BC2762DE9A0068DBAD /* UsingOverly.swift */,
-				917489BF2763B36C0068DBAD /* LineView.swift */,
 				917489C22763BAB00068DBAD /* LineView2.swift */,
 				91C8CD7A27656F76000ACC41 /* LineView3.swift */,
 				91B1F45A2766988000B223F3 /* S1Line.swift */,
@@ -148,6 +167,16 @@
 				91B1F4682766C32C00B223F3 /* LumbarLordosisViewModel.swift */,
 			);
 			path = "View Model";
+			sourceTree = "<group>";
+		};
+		91B1F46E2766C54600B223F3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9138140B2768D05D0058FD9B /* Components */,
+				917489BF2763B36C0068DBAD /* LineView.swift */,
+				91B1F46F2766CF7A00B223F3 /* LumbarLines.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,7 +224,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					91A325D02741FFD100E9FC0F = {
 						CreatedOnToolsVersion = 13.1;
@@ -248,10 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91FEFAFF276981F400867723 /* CompletionHandlerButton.swift in Sources */,
 				91B1F4662766BA0B00B223F3 /* LineViewModel.swift in Sources */,
+				915EED6227695A8200F01374 /* ToolPalette.swift in Sources */,
 				91C8CD7B27656F76000ACC41 /* LineView3.swift in Sources */,
 				917489BD2762DE9A0068DBAD /* UsingOverly.swift in Sources */,
 				91C53632275D94FB00ED5F49 /* OneLine.swift in Sources */,
+				91B1F4702766CF7A00B223F3 /* LumbarLines.swift in Sources */,
+				91F7C43E276851B1006E935B /* MyToolBar.swift in Sources */,
 				91D010842753C78700B053EE /* PathExample.swift in Sources */,
 				91C5362F275D329800ED5F49 /* MultipleLines.swift in Sources */,
 				917489C32763BAB00068DBAD /* LineView2.swift in Sources */,
@@ -275,6 +308,7 @@
 				91C8CD7C27656F76000ACC41 /* LineView3.swift in Sources */,
 				917489BE2762DE9A0068DBAD /* UsingOverly.swift in Sources */,
 				91C53633275D94FB00ED5F49 /* OneLine.swift in Sources */,
+				91B1F4712766CF7A00B223F3 /* LumbarLines.swift in Sources */,
 				91D010852753C78700B053EE /* PathExample.swift in Sources */,
 				91C53630275D329800ED5F49 /* MultipleLines.swift in Sources */,
 				917489C42763BAB00068DBAD /* LineView2.swift in Sources */,
@@ -471,6 +505,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -499,6 +534,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;

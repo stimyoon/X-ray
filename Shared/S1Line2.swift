@@ -9,7 +9,7 @@ import SwiftUI
 
 struct S1Line2: View {
     @StateObject var s1Line = LinesVM()
-    @StateObject var lien = LineVM()
+    @StateObject var line = LineVM()
     @State var index = 0
     
     

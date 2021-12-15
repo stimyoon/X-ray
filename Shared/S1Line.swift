@@ -102,7 +102,7 @@ struct S1Line: View {
     }
 }
 
-struct TrialSine_Previews: PreviewProvider {
+struct S1Line_Previews: PreviewProvider {
     static var previews: some View {
         S1Line()
     }
