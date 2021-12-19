@@ -30,7 +30,9 @@ struct LineSegment: View {
         Path{ path in
             path.move(to: p1 ?? .zero)
             path.addLine(to: p2 ?? .zero)
-        }.stroke(p2 != nil && p1 != nil ? lineColor : .clear, lineWidth: 5)
+        }
+        .stroke(style: StrokeStyle(lineWidth: 5, lineCap: .round))
+        .stroke(p2 != nil && p1 != nil ? lineColor : .clear, lineWidth: 5)
             .opacity(0.5)
     }
 }
