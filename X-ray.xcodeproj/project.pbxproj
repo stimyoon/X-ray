@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9120B6C0276C109F00A12C72 /* AngleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120B6BF276C109F00A12C72 /* AngleVM.swift */; };
-		9120B6C1276C109F00A12C72 /* AngleVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9120B6BF276C109F00A12C72 /* AngleVM.swift */; };
 		915EED6227695A8200F01374 /* ToolPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915EED6127695A8200F01374 /* ToolPalette.swift */; };
+		91677D22277018DC00437F02 /* ToolPalette.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915EED6127695A8200F01374 /* ToolPalette.swift */; };
 		917489BA2761AF580068DBAD /* OneLine2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917489B92761AF580068DBAD /* OneLine2.swift */; };
 		917489BB2761AF580068DBAD /* OneLine2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917489B92761AF580068DBAD /* OneLine2.swift */; };
 		917489BD2762DE9A0068DBAD /* UsingOverly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917489BC2762DE9A0068DBAD /* UsingOverly.swift */; };
@@ -52,7 +51,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9120B6BF276C109F00A12C72 /* AngleVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AngleVM.swift; sourceTree = "<group>"; };
 		915EED6127695A8200F01374 /* ToolPalette.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToolPalette.swift; sourceTree = "<group>"; };
 		917489B92761AF580068DBAD /* OneLine2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneLine2.swift; sourceTree = "<group>"; };
 		917489BC2762DE9A0068DBAD /* UsingOverly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsingOverly.swift; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 				91B1F4652766BA0B00B223F3 /* LineViewModel.swift */,
 				91B1F46B2766C34C00B223F3 /* S1LineViewModel.swift */,
 				91B1F4682766C32C00B223F3 /* LumbarLordosisViewModel.swift */,
-				9120B6BF276C109F00A12C72 /* AngleVM.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -296,7 +293,6 @@
 				91C8CD7B27656F76000ACC41 /* LineView3.swift in Sources */,
 				917489BD2762DE9A0068DBAD /* UsingOverly.swift in Sources */,
 				91C53632275D94FB00ED5F49 /* OneLine.swift in Sources */,
-				9120B6C0276C109F00A12C72 /* AngleVM.swift in Sources */,
 				91B1F4702766CF7A00B223F3 /* LumbarLines.swift in Sources */,
 				91F7C43E276851B1006E935B /* MyToolBar.swift in Sources */,
 				91D010842753C78700B053EE /* PathExample.swift in Sources */,
@@ -318,7 +314,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9120B6C1276C109F00A12C72 /* AngleVM.swift in Sources */,
+				91677D22277018DC00437F02 /* ToolPalette.swift in Sources */,
 				91B1F4672766BA0B00B223F3 /* LineViewModel.swift in Sources */,
 				91C8CD7C27656F76000ACC41 /* LineView3.swift in Sources */,
 				917489BE2762DE9A0068DBAD /* UsingOverly.swift in Sources */,

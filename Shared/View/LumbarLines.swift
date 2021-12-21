@@ -17,23 +17,55 @@ struct LumbarLines: View {
     @State var PI = ""
     @State var PT = ""
     
+    #if os(macOS)
+    @State var nsImage : NSImage?
+    #endif
+    
     func invalidateAllLines() -> Void{
         L1.invalidate()
         S1.invalidate()
         FemoralHead.invalidate()
     }
+    #if os(macOS)
+    func copyTextToPasteboard(text: String){
+        let pasteboard = NSPasteboard.general
+        pasteboard.clearContents()
+        pasteboard.setString(text, forType: .string)
+    }
+    func pasteboardImage() -> NSImage?
+    {
+        let pb = NSPasteboard.general
+        let type = NSPasteboard.PasteboardType.tiff
+        guard let imgData = pb.data(forType: type) else { return nil }
+       
+        return NSImage(data: imgData)
+    }
+
+    func writeImageToPasteboard(img: NSImage)
+    {
+        let pb = NSPasteboard.general
+        pb.clearContents()
+        pb.writeObjects([img])
+    }
+    #endif
+
     var angleTexts: some View {
         VStack{
             HStack{
-                Spacer()
+                
                 Button {
+                    let text = String("LL: \(LL)\nPI: \(PI)\nPI: \(PI)")
+                    #if os(macOS)
+                    copyTextToPasteboard(text: text)
+                    #endif
                     
                 } label: {
                     VStack{
-                        Text("LL: \(LL)").foregroundColor(.white)
-                        Text("PI: \(PI)").foregroundColor(.white)
-                        Text("PI: \(PI)").foregroundColor(.white)
+                        Text("LL: \(LL)")
+                        Text("PI: \(PI)")
+                        Text("PT: \(PT)")
                     }
+                    .foregroundColor(.accentColor)
                     .padding()
                     .background(.black)
                     .clipShape(RoundedRectangle(cornerRadius: 20))
@@ -41,8 +73,8 @@ struct LumbarLines: View {
                     .background(.white.opacity(0.5))
                     .clipShape(RoundedRectangle(cornerRadius: 20))
                     .padding()
-
-                }
+                    
+                }.buttonStyle(PlainButtonStyle())
 
             }
             
@@ -58,28 +90,52 @@ struct LumbarLines: View {
         }
         .onChange(of: S1.p1) { _ in
             setAngleText()
+            setPIText()
         }
         .onChange(of: S1.p2) { _ in
             setAngleText()
+            setPIText()
         }
+        .onChange(of: FemoralHead.p1, perform: { _ in
+            setPIText()
+            setPTText()
+        })
+        .onChange(of: FemoralHead.p2, perform: { _ in
+            setPIText()
+            setPTText()
+        })
         .onChange(of: FemoralHead.midPoint) { _ in
             setPIText()
-//            setPTText()
-        }
-        .onChange(of: FemoralHead.p3) { _ in
-            setPIText()
-//            setPTText()
+            setPTText()
         }
     }
+    
     var body: some View {
         HStack{
             ZStack{
+                
                 Color.black.ignoresSafeArea()
+
+                
+                
+#if os(macOS)
+                if let unwrappedNSImage = nsImage {
+                    Image(nsImage: unwrappedNSImage)
+                        .resizable()
+                        .scaledToFit()
+                } else {
+                    Image("X-ray")
+                        .resizable()
+                        .scaledToFit()
+                }
+                
+#elseif os(iOS)
                 Image("X-ray")
                     .resizable()
                     .scaledToFit()
+#endif
+                
                 angleTexts
-                    
                 L1LineView(L1: L1)
                 S1LineView(S1: S1)
                 FemoralHeadsLineView(FemoralHead: FemoralHead, S1: S1)
@@ -99,6 +155,26 @@ struct LumbarLines: View {
                                 return
                         }
                     }
+                HStack{
+                    Button {
+                        #if os(macOS)
+                        nsImage = pasteboardImage()
+                        #endif
+                        
+                    } label: {
+                        Text("Use clipboard image")
+                            .foregroundColor(.blue)
+                            .padding()
+                            .background(.black)
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .padding(4)
+                            .background(.white.opacity(0.5))
+                            .clipShape(RoundedRectangle(cornerRadius: 20))
+                            .padding()
+                    }
+                    .buttonStyle(PlainButtonStyle())
+                    Spacer()
+                }
      
             }
             .contentShape(Rectangle())
@@ -160,11 +236,11 @@ extension LumbarLines {
         return String(format: "%.2f",acos(value) * 180 / .pi)
     }
     func setPIText(){
-        guard let p1 = S1.midPoint, let p2 = S1.p3, let p3 = FemoralHead.midPoint, let p4 = FemoralHead.p3 else {
+        guard let p1 = S1.midPoint, let p2 = S1.p3, let p3 = FemoralHead.midPoint, let p4 = S1.midPoint else {
             PI = ""
             return
         }
-        PI = getAngle(p1: p1, p2: p2, p3: p3, p4: p4)
+        PI = getAngle(p1: p2 , p2: p1, p3: p3, p4: p4)
     }
     func setPTText(){
         guard let p1 = FemoralHead.midPoint, let p2 = S1.midPoint, let p3 = FemoralHead.midPoint else {
@@ -173,7 +249,7 @@ extension LumbarLines {
         }
         
         let p4 = CGPoint(x: p3.x, y: p3.y + 100)
-        PT = getAngle(p1: p1, p2: p2, p3: p3, p4: p4)
+        PT = getAngle(p1: p2, p2: p1, p3: p3, p4: p4)
     }
 
 }

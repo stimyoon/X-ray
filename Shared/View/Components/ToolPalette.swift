@@ -49,7 +49,7 @@ struct PaletteButton: View {
                         .foregroundColor(.black)
                         .opacity(0.8)
                         .frame(width: thisButtonIsSelected ? 65 : 60, height: 50)
-                        .shadow(color: .gray, radius: 5, x: 5, y: 5)
+//                        .shadow(color: .gray, radius: 5, x: 5, y: 5)
                 )
                 
         }
